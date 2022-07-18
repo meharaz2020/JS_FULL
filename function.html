@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //build in function
+    // alert();
+    // console.log();
+
+    //user define function
+
+    function saySomething() {
+        console.log("HI");
+    }
+    saySomething();
+
+    //parameter
+
+    function saySomething1(e) {
+        console.log(`HI ${e}`);
+    }
+    saySomething1("GOOD");
+
+    //return function
+
+
+    function saySomething2(e, f) {
+        console.log(`HI ${e+f}`);
+    }
+    console.log(saySomething2(1, 2));
+
+    //function expression
+
+    let saySomething3 = function(e, f) {
+        console.log(`expression ${e+f}`);
+    }
+    console.log(saySomething3(1, 2));
+
+
+    //arrow function
+    let saySomething4 = (e, f) => {
+        console.log(`Arrow ${e+f}`);
+    }
+    console.log(saySomething4(1, 2));
+
+
+    //array etaration foreach we use map in the forEach function its same work
+    //1st parameter Item
+    //2nd parameter Index
+    //3rd parameter Whole array
+    var food = ["Burger", "Chicken", "Juice"];
+    var number = [1, 2, 3];
+    food.forEach(function(i, j, k) {
+        console.log(`${i} ${j}`);
+        console.log(`${k}`);
+    });
+
+    //2nd way
+    var food1 = ["Burger", "Chicken", "Juice"];
+    var number2 = [1, 2, 3];
+    let Everyfood = (function(i, j, k) {
+        console.log(`${i} ${j}`);
+        console.log(`${k}`);
+    });
+    food1.forEach(Everyfood);
+
+
+
+    //object method
+    let person = {
+        fname: "Meharaz",
+        lname: "Hossain",
+        fullname: function() {
+            return `${this.fname} ${this.lname}`;
+        }
+    }
+    console.log(person.fname);
+    console.log(person.fullname());
+
+    //math function
+    let val;
+    val = Math.PI;
+    val = Math.E;
+    val = Math.round(3.1);
+    val = Math.ceil(1.1);
+    val = Math.floor(9.1);
+    val = Math.sqrt(9);
+    val = Math.abs(-8);
+    val = Math.pow(2, 3);
+    val = Math.min(9, 3, 7, 8);
+    val = Math.max(9, 33, 2, 66);
+    val = Math.random();
+    val = Math.floor(Math.random() * 100 + 1);
+    console.log(val);
+
+    //Date function
+
+    let today = new Date();
+    let val1 = today.toString();
+    //also we use today.getMonth(),getDate(),getDay(),getFullYear(),getHours(),getMinutes(),getMilliseconds(),getTime(),setMonthh(?),setDate(?),setFullYear(?),setHours(?)
+    console.log(val1);
+
+    //ver let const
+
+    //we declare ver again and again
+    //but in let use only onetime when we declare let again then show some error, its help for coding
+    //const not can be reassign
+</script>
+
+<body>
+
+</body>
+
+</html>
