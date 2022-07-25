@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person1 = {
+            firstname: "Meharaz",
+            lastname: "Hossain",
+            dob: "11-12-15",
+
+            fullname: function() {
+                console.log(`${this.firstname} ${this.lastname}`);
+            }
+        }
+
+        let person2 = {
+            firstname: "Mehjabin",
+            lastname: "Meera",
+            dob: "11-12-15",
+
+            fullname: function() {
+                console.log(`${this.firstname} ${this.lastname}`);
+            }
+        }
+
+        console.log(person1);
+        console.log(person2);
+
+
+        //how to create a dynamic class
+
+        class person {
+            constructor(fname, lname, dob) {
+                this.firstname = fname;
+                this.lastname = lname;
+                this.birth = dob;
+            }
+        }
+
+        let person11 = new person("Mhr", "1", "2");
+        let person12 = new person("Mhr", "3", "4");
+        let person13 = new person("Mhr", "5", "6");
+
+        console.log(person11);
+        console.log(person12);
+        console.log(person13);
+    </script>
+</body>
+
+</html>
